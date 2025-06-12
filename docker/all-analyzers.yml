@@ -1,0 +1,51 @@
+services:
+  bbot_analyzer:
+    build:
+      context: ../integrations/bbot
+      dockerfile: Dockerfile
+    image: intelowlproject/intelowl_bbot_analyzer:test
+
+  cyberchef-server:
+    build:
+      context: ../integrations/cyberchef
+      dockerfile: Dockerfile
+    image: intelowlproject/cyberchef:test
+
+  malware_tools_analyzers:
+    build:
+      context: ../integrations/malware_tools_analyzers
+      dockerfile: Dockerfile
+    image: intelowlproject/intelowl_malware_tools_analyzers:test
+
+  nuclei_analyzer:
+    build:
+      context: ../integrations/nuclei_analyzer
+      dockerfile: Dockerfile
+    image: intelowlproject/nuclei_analyzer:test
+
+  pcap_analyzers:
+    build:
+      context: ../integrations/pcap_analyzers
+      dockerfile: Dockerfile
+    image: intelowlproject/intelowl_pcap_analyzers:test
+
+  phishing_analyzers:
+    build:
+      context: ../integrations/phishing_analyzers
+      dockerfile: Dockerfile
+    image: intelowlproject/intelowl_phishing_analyzers:test
+
+  phoneinfoga:
+    image: sundowndev/phoneinfoga:v2.11.0
+
+  thug:
+    build:
+      context: ../integrations/thug
+      dockerfile: Dockerfile
+    image: intelowlproject/intelowl_thug:test
+
+  tor_analyzers:
+    build:
+      context: ../integrations/tor_analyzers
+      dockerfile: Dockerfile
+    image: intelowlproject/intelowl_tor_analyzers:test
